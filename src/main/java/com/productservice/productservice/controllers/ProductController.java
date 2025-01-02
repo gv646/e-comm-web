@@ -1,9 +1,13 @@
 package com.productservice.productservice.controllers;
 
+import com.productservice.productservice.dtos.FakeStoreProductDto;
+import com.productservice.productservice.dtos.GenericProductDto;
 import com.productservice.productservice.services.FakeStoreProductService;
 import com.productservice.productservice.services.ProductService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/products")
@@ -17,12 +21,13 @@ public class ProductController {
 
     //localhost:8080/products/123
     @GetMapping("/{id}")
-    public String getProductById(@PathVariable("id") Long id){
+    public GenericProductDto getProductById(@PathVariable("id") Long id){
         return productService.getProductById(id);
     }
 
     @GetMapping
-    public void getAllProducts(){
+    public List<GenericProductDto> getAllProducts(){
+        return productService.getAllProducts();
 
     }
 
@@ -30,8 +35,10 @@ public class ProductController {
     public void deleteProductById(){
 
     }
-    
-    public void createProduct(){
+
+    @PostMapping
+    public GenericProductDto createProduct(@RequestBody GenericProductDto genericProductDto){
+        return productService.createProduct(genericProductDto);
 
     }
 
