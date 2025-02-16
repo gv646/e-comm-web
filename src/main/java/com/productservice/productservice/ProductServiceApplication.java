@@ -23,6 +23,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -236,16 +237,33 @@ public class ProductServiceApplication implements CommandLineRunner {
 //
 //        Product savedProduct2 = productRepository.save(product3);
 
-        Optional<Category> optionalCategory = categoryRepository.findById(UUID.fromString("d397177b-3fc6-4827-96c5-0dfdfab999d5"));
-        Category category = optionalCategory.get();
+//        Optional<Category> optionalCategory = categoryRepository.findById(UUID.fromString("d397177b-3fc6-4827-96c5-0dfdfab999d5"));
+//        Category category = optionalCategory.get();
+//
+//        List<Product> products = category.getProducts();
+//
+//        for (Product product : products) {
+//            System.out.println(product.getTitle());
+//            System.out.println(product.getPrice().getValue());
+//            System.out.println(product.getCategory().getName());
+//        }
 
-        List<Product> products = category.getProducts();
+//        Category category = new Category("Samsung Device",new ArrayList<>());
+//        Category category1 = categoryRepository.save(category);
+//
+//        Price price = new Price("USD",40000);
+//
+//        Product product = new Product("Samsung Fold 5","Samsung's fold phone","IMG1",
+//                category1,price);
+//
+//        productRepository.save(product);
 
-        for (Product product : products) {
-            System.out.println(product.getTitle());
-            System.out.println(product.getPrice().getValue());
-            System.out.println(product.getCategory().getName());
-        }
+//        List<Product> products = productRepository.findAllByPrice_ValueGreaterThan(100000);
+//        for (Product product : products) {
+//            System.out.println(product.getTitle());
+//            System.out.println(product.getPrice().getValue());
+//            System.out.println();
+//        }
 
     }
 }

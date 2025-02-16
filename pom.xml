@@ -73,6 +73,14 @@
             <artifactId>mysql-connector-j</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-mysql -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-mysql</artifactId>
+            <version>11.3.1</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
