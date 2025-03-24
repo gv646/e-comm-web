@@ -31,16 +31,16 @@ import java.util.UUID;
 @SpringBootApplication
 public class ProductServiceApplication implements CommandLineRunner {
 
-    private final CategoryRepository categoryRepository;
-    private final ProductRepository productRepository;
-    private final PriceRepository priceRepository;
+//    private final CategoryRepository categoryRepository;
+//    private final ProductRepository productRepository;
+//    private final PriceRepository priceRepository;
 
-    public ProductServiceApplication(CategoryRepository categoryRepository,
-                                     ProductRepository productRepository, PriceRepository priceRepository) {
-        this.categoryRepository = categoryRepository;
-        this.productRepository = productRepository;
-        this.priceRepository = priceRepository;
-    }
+//    public ProductServiceApplication(CategoryRepository categoryRepository,
+//                                     ProductRepository productRepository, PriceRepository priceRepository) {
+//        this.categoryRepository = categoryRepository;
+//        this.productRepository = productRepository;
+//        this.priceRepository = priceRepository;
+//    }
 
 
 //    private final CategoryRepository categoryRepository;
